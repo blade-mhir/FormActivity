@@ -27,11 +27,12 @@ input[type="submit"]{
         height: 20px;
         width: 60px;
         font-size: 10px;
-    }
+}
+
 input[type="reset"]{
         background-color: red;
         border: 0px;
         height: 20px;
         width: 60px;
         font-size: 10px;
-    }
+}
