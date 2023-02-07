@@ -1,9 +1,6 @@
-form {
-    position: center;
-  }
-
 body {
-        background-color: lightslategrey;
-        font-family: Oswald;
-    }
-
+    background-color: lightslategrey;
+    font-family: Oswald;
+    text-align: center;
+    color: white;
+}
