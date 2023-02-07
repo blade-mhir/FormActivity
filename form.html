@@ -2,29 +2,32 @@
 <html>
     <head>
         <title>Form Activity</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
         <link rel="stylesheet" href="style.css" type="text/css">
     </head>
     <body>
+	 <div style="display: flex; justify-content: center;">
         <form>
         <h1>Registration Form</h1>
         First Name: <br />
-        <input type="text" name="firstname"/>
+        <input type="text" class="full" name="firstname" />
         <br />
         Last Name: <br />
-        <input type="text" name="lastname"/>
+        <input type="text" class="full" name="lastname" />
         <br />
         Nick Name: <br />
-        <input type="text" name="nickname"/>
+       <input type="text" class="full" name="nickname" />
         <br />
         Email: <br />
-        <input type="email" name="email" />
+       <input type="email" class="full" name="email" />
         <br />
         Password: <br />
-        <input type="password" name="password" />
+         <input type="password" class="full" name="password" />
         <br />
          Date of Birth: <br /> 
-         <input type="date" class="full" name="bday" />  <br />
+        <input type="date" class="full" name="bday" />
         Gender: <br />
         <input type="radio" name="male" value="male"/> Male
         <input type="radio" name="female" value="female"/>Female
@@ -40,5 +43,6 @@
         <input type="reset" name="reset" value="Reset"/>
         <br />
         </form>
+      </div>
     </body>
 </html>
