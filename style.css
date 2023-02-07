@@ -1,6 +1,63 @@
-body {
-    background-color: lightslategrey;
-    font-family: Oswald;
-    text-align: center;
-    color: white;
+body{
+    font-family: 'Oswald';
+    font-weight: 200;
+    background-color: lightslategray;
+    align-content: center;
 }
+
+form {
+ background-color: white;
+    border-radius: 5px;
+    margin: 35px;
+    padding: 30px;
+    box-sizing: content-box;
+    width: min-content;
+}
+
+input[type="text"]{
+  padding: 0px 30px;
+  border-radius: 3px;
+}
+
+input[type="email"]{
+  padding: 0px 30px;
+  border-radius: 2px;
+}
+
+input[type="password"]{
+  padding: 0px 30px;
+  border-radius: 2px;
+}
+
+input[type="date"]{
+  padding: 0px 46px;
+  border-radius: 2px;
+  text-align:left;
+}
+
+input[type="number"]{
+  padding: 0px 30px;
+  border-radius: 2px;
+}
+
+textarea[name="address"]{
+  padding: 0px 12px;
+  border-radius: 2px;
+}
+
+
+input[type="submit"]{
+        background-color: green;
+        border: 0px;
+        color: white;
+        height: 20px;
+        width: 60px;
+        font-size: 10px;
+    }
+input[type="reset"]{
+        background-color: red;
+        border: 0px;
+        height: 20px;
+        width: 60px;
+        font-size: 10px;
+    }
