@@ -6,11 +6,47 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
         <link rel="stylesheet" href="style.css" type="text/css">
+        <script language="javascript" type="text/javascript">
+
+          var flag = true;
+          function checkPass(){
+             var pass = document.rForm.passw.value;
+          
+             if(pass.length < 8){
+              document.getElementById("msg1").innerHTML="Password must be at least 8 characters.";
+              flag = false
+            }
+             else{
+              document.getElementById("msg1").innerHTML=""
+             }
+          }
+
+          function checkAge(){
+     
+            var year = Number(document.rForm.bday.value.substring(0,4));
+            var age = 2023 - year;
+    
+            if(age < 21){
+                document.getElementById("msg2").innerHTML = "Minors are not allowed!"
+                flag = false;
+            } else{
+              document.getElementById("msg2").innerHTML="";
+             }
+          }
+          
+          function validateForm() {
+              if (flag) 
+                document.getElementById("msg3").innerHTML = "Hooray! Your account has been successfully created."
+          }
+        
+          </script>
     </head>
           <body>
               <div style="display: flex; justify-content: center;">
-                    <form>
+                    <form name ="rForm">
                     <h1>Registration Form</h1>
+                    <span id = "msg3" style="color:green;font-size: smaller;"></span>
+                    <br />
                     First Name: <br />
                     <input type="text" class="full" name="firstname" />
                     <br />
@@ -24,10 +60,13 @@
                   <input type="email" class="full" name="email" />
                     <br />
                     Password: <br />
-                    <input type="password" class="full" name="password" />
+                    <input type="password" class="full" name="passw"/>
+                    <span id = "msg1" style="color:red;font-size: smaller;"></span>
                     <br />
                     Date of Birth: <br /> 
-                    <input type="date" class="full" name="bday" />
+                    <input type="date" class="full" name="bday" id="bday" />
+                    <span id = "msg2" style="color:red;font-size: smaller;"></span>
+                    <br />
                     Gender: <br />
                     <input type="radio" name="male" value="male"/> Male
                     <input type="radio" name="female" value="female"/>Female
@@ -39,8 +78,8 @@
                     Address: <br />
                     <textarea name="address" cols="45" rows="10"></textarea>
                     <br />
-                    <input type="submit" name="submit" value="Submit"/>
-                    <input type="reset" name="reset" value="Reset"/>
+                    <input type="button" name="submit" value="Submit" onclick="checkPass(), checkAge(), validateForm()"/>
+                    <input type="button" name="reset" value="Reset"/>
                     <br />
                     </form>
                   </div>
